@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { SocialIcon } from "react-social-icons";
+
 import Home from "./components/Home";
 import About from "./components/About";
 import SinglePost from "./components/SinglePost";
@@ -8,6 +8,7 @@ import Project from "./components/Project";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 
+import TodoList from "./components/Todo/TodoList";
 import "./App.scss";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route component={SinglePost} path="/post/:slug" />
         <Route component={Post} path="/post" />
         <Route component={Project} path="/project" />
+        <Route component={TodoList} path="/todo/TodoList" />
       </Switch>
       <Footer />
     </BrowserRouter>

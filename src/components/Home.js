@@ -7,7 +7,7 @@ export default function Home() {
         <h1 className="text-2xl font-bold cursive ">
           Hei! Jeg er Tommer Haugland, en front-end utvikler fra Bergen(ish).
         </h1>
-        <span class="font-bold cursive">
+        <span className="font-bold cursive">
           Nerd. Gamer. Foodie og utvikler hos{" "}
           <a href="www.acos.no" className="nav-link">
             ACOS AS

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
+import TodoList from "./Todo/TodoList.js";
 
 export default function Project() {
   const [projectData, setProjectData] = useState(null);
@@ -72,6 +73,9 @@ export default function Project() {
                 </div>
               </article>
             ))}
+        </section>
+        <section>
+          <TodoList />
         </section>
       </section>
     </main>

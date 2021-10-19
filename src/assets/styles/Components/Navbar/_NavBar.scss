@@ -15,7 +15,7 @@
 }
 
 .nav-links {
-  display: grid;
+  display: flex; //TODO GRID
   grid-template-columns: repeat(4, auto);
   grid-gap: 20px;
   list-style: none;
