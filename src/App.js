@@ -21,7 +21,6 @@ function App() {
         <Route component={SinglePost} path="/post/:slug" />
         <Route component={Post} path="/post" />
         <Route component={Project} path="/project" />
-        <Route component={TodoList} path="/todo/TodoList" />
       </Switch>
       <Footer />
     </BrowserRouter>

@@ -42,11 +42,6 @@ const Navbar = () => {
             Kontakt
           </Link>
         </li>
-        <li className="nav-item">
-          <Link to="/todo" className="nav-link" onClick={closeMenu}>
-            Todo
-          </Link>
-        </li>
       </ul>
     </nav>
   );
