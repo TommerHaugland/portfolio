@@ -1,66 +1,50 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { SocialIcon } from "react-social-icons";
+import React, { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
-export default function NavBar() {
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
+
+  const closeMenu = () => {
+    setOpen(false);
+  };
+
   return (
-    <header className="bg-red-600">
-      <div className="container mx-auto flex justify-between">
-        <nav className="flex">
-          <NavLink
-            to="/"
-            exact
-            activeClassName="text-white"
-            className="inline-flex items-center py-6 px-3 mr-auto text-red-100 hover:text-green-800 text-4xl font-bold cursive tracking-widest"
-          >
-            Tommer
-          </NavLink>
-          <NavLink
-            to="/about"
-            activeClassName="text-red-100 bg-red-700"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800"
-          >
-            About
-          </NavLink>
-          <NavLink
-            to="/post"
-            activeClassName="text-red-100 bg-red-700"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800"
-          >
-            Blog posts
-          </NavLink>
-          <NavLink
-            to="/project"
-            activeClassName="text-red-100 bg-red-700"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800"
-          >
-            Projects
-          </NavLink>
-        </nav>
-        <div className="inline-flex py-3 px-3 my-6">
-          <SocialIcon
-            url="https://github.com/TommerHaugland"
-            className="mr-4"
-            target="_blank"
-            fgColor="#fff"
-            style={{ height: 35, width: 35 }}
-          />
-          <SocialIcon
-            url="https://www.linkedin.com/in/tommer-haugland/"
-            className="mr-4"
-            target="_blank"
-            fgColor="#fff"
-            style={{ height: 35, width: 35 }}
-          />
-          <SocialIcon
-            url="https://www.facebook.com/tommer.haugland/"
-            className="mr-4"
-            target="_blank"
-            fgColor="#fff"
-            style={{ height: 35, width: 35 }}
-          />
-        </div>
+    <nav className="navbar shadow-xl">
+      <Link to="/" className="nav-logo">
+        T
+      </Link>
+      <div onClick={handleClick} className="nav-icon">
+        {open ? <FiX /> : <FiMenu />}
       </div>
-    </header>
+      <ul className={open ? "nav-links active" : "nav-links"}>
+        <li className="nav-item">
+          <Link to="/" className="nav-link" onClick={closeMenu}>
+            Hjem
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/about" className="nav-link" onClick={closeMenu}>
+            Om meg
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/project" className="nav-link" onClick={closeMenu}>
+            Prosjekter
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/contact" className="nav-link" onClick={closeMenu}>
+            Kontakt
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
-}
+};
+
+export default Navbar;

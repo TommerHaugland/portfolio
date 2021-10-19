@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
+import { SocialIcon } from "react-social-icons";
 import Home from "./components/Home";
 import About from "./components/About";
 import SinglePost from "./components/SinglePost";
@@ -7,6 +7,8 @@ import Post from "./components/Post";
 import Project from "./components/Project";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+
+import "./App.scss";
 
 function App() {
   return (

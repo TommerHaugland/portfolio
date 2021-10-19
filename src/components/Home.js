@@ -3,17 +3,15 @@ import React from "react";
 export default function Home() {
   return (
     <main>
-      <img
-        src="https://source.unsplash.com/random"
-        alt="Random images from Unsplashed.com"
-        className="absolute object-cover w-full h-full"
-      />
-      <section className="relative flex justify-center flex-col min-h-screen pt-12 lg:pt-64 px-8">
-        <h1 className="text-6xl text-green-100 font-bold cursive leading-none lg:leading-snug home-name">
-          Hi! I'm Tommer.
+      <section className="relative flex justify-center flex-col min-h-screen px-8">
+        <h1 className="text-2xl font-bold cursive ">
+          Hei! Jeg er Tommer Haugland, en front-end utvikler fra Bergen(ish).
         </h1>
-        <span class="text-xl text-green-100 font-bold cursive">
-          Techie, Gamingnerd that loves to code
+        <span class="font-bold cursive">
+          Nerd. Gamer. Foodie og utvikler hos{" "}
+          <a href="www.acos.no" className="nav-link">
+            ACOS AS
+          </a>
         </span>
       </section>
     </main>
